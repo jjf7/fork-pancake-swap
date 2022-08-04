@@ -367,6 +367,7 @@ const LimitOrders = () => {
                       onCurrencySelect={handleOutputSelect}
                       otherCurrency={currencies.output}
                       id="limit-order-currency-output"
+                      
                     />
                     <LimitOrderPrice
                       id="limit-order-desired-rate-input"
@@ -420,18 +421,7 @@ const LimitOrders = () => {
                       </Button>
                     )}
                   </Box>
-                  <Flex mt="16px" justifyContent="center">
-                    <Link external href="https://www.gelato.network/">
-                      <img
-                        src={
-                          theme.isDark ? '/images/powered_by_gelato_white.svg' : '/images/powered_by_gelato_black.svg'
-                        }
-                        alt="Powered by Gelato"
-                        width="170px"
-                        height="48px"
-                      />
-                    </Link>
-                  </Flex>
+                  
                 </Wrapper>
               </AppBody>
             </StyledInputCurrencyWrapper>
@@ -441,11 +431,7 @@ const LimitOrders = () => {
               <LimitOrderTable isCompact />
             </Flex>
           )}
-          {isSideFooter && (
-            <Box display={['none', null, null, 'block']} width="100%" height="100%">
-              <Footer variant="side" helpUrl={LIMIT_ORDERS_DOCS_URL} />
-            </Box>
-          )}
+         
         </Flex>
       </Flex>
       {/* Fixed position, doesn't take normal DOM space */}
